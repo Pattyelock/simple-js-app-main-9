@@ -1,18 +1,18 @@
 // IIFE to encapsulate the repository and keep global state clean
-let pokemonRepository = (function() {
+let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  
+
     // Function to add a new Pokémon to the list
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
-  
+
     // Function to retrieve all Pokémon in the list
     function getAll() {
         return pokemonList;
     }
-  
+
     // Fetch Pokémon data from the API and add to the list
     function loadList() {
         return fetch(apiUrl)
@@ -28,7 +28,7 @@ let pokemonRepository = (function() {
             })
             .catch(error => console.error(error));
     }
-  
+
     // Load details of a specific Pokémon (type, level, image, etc.)
     function loadDetails(pokemon) {
         return fetch(pokemon.detailsUrl)
@@ -40,7 +40,7 @@ let pokemonRepository = (function() {
             })
             .catch(error => console.error(error));
     }
-  
+
     // Create list item with button and add click event to show modal
     function addListItem(pokemon) {
         let pokemonListElement = document.querySelector('.pokemon-list');
@@ -48,32 +48,32 @@ let pokemonRepository = (function() {
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('pokemon-button');
-  
+
         listItem.appendChild(button);
         pokemonListElement.appendChild(listItem);
-  
+
         // Event listener to load details and show them in the modal
-        button.addEventListener('click', function() {
-            loadDetails(pokemon).then(function() {
+        button.addEventListener('click', function () {
+            loadDetails(pokemon).then(function () {
                 showDetails(pokemon);
             });
         });
     }
-  
+
     // Display the modal with Pokémon details
     function showModal(title, details, imageUrl) {
         let modalContainer = document.querySelector('#pokemon-modal');
         let modalTitle = document.querySelector('.modal-title');
         let modalDetails = document.querySelector('.modal-details');
         let modalImage = document.querySelector('.modal-image');
-  
+
         modalTitle.innerText = title;
         modalDetails.innerText = details;
         modalImage.src = imageUrl;
-  
+
         modalContainer.style.display = 'flex';
     }
-  
+
     // Show details of the selected Pokémon in the modal
     function showDetails(pokemon) {
         showModal(
@@ -82,13 +82,13 @@ let pokemonRepository = (function() {
             pokemon.imageUrl
         );
     }
-  
+
     // Close modal when clicking on the close button
     let closeButton = document.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
         document.querySelector('#pokemon-modal').style.display = 'none';
     });
-  
+
     // Close modal when clicking outside the content
     window.addEventListener('click', (event) => {
         let modalContainer = document.querySelector('#pokemon-modal');
@@ -96,7 +96,14 @@ let pokemonRepository = (function() {
             modalContainer.style.display = 'none';
         }
     });
-  
+    // Close modal with the Escape key
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            document.querySelector('#pokemon-modal').style.display = 'none';
+        }
+    });
+
+
     // Return public functions
     return {
         add: add,
@@ -105,12 +112,11 @@ let pokemonRepository = (function() {
         addListItem: addListItem,
         loadDetails: loadDetails
     };
-  })();
-  
-  // Load Pokémon list and display each item on the page
-  pokemonRepository.loadList().then(function() {
-    pokemonRepository.getAll().forEach(function(pokemon) {
+})();
+
+// Load Pokémon list and display each item on the page
+pokemonRepository.loadList().then(function () {
+    pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
-  });
-  
+});
