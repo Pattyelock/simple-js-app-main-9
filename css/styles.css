@@ -15,4 +15,19 @@
 
 .pokemon-button:hover {
     background-color: #45a049;
+    /* Responsive image */
+.modal-image {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    max-width: 200px; /* Set a max width for larger screens */
+}
+
+/* Adjust modal content for smaller screens */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Adjusts width for mobile */
+    }
+}
+
 }
