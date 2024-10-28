@@ -11,13 +11,14 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    width: 150px; /* Set a fixed width for consistency */
 }
 
 .pokemon-button:hover {
     background-color: #45a049;
 }
 
-/* Modal styles */
+/* Modal styles. */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -27,8 +28,7 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
 /* Modal content */
@@ -37,30 +37,14 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Close button */
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    width: 300px; /* Set a smaller width for the modal */
 }
 
 /* Responsive image */
 .modal-image {
-    width: 80%;
+    width: 100%; /* Make the image responsive */
     height: auto;
     margin-top: 10px;
-    max-width: 200px; /* Set a max width for larger screens */
 }
 
 /* Adjust modal content for smaller screens */
