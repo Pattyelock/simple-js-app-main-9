@@ -1,23 +1,36 @@
-Pokémon Repository
+# Pokémon Repository Project
 
-A web-based Pokémon repository that fetches data from the PokéAPI to display a list of Pokémon with details, using a responsive and interactive interface built with Bootstrap.
-Table of Contents
+A web application that displays a list of Pokémon, fetched from the [PokéAPI](https://pokeapi.co/), allowing users to view details of each Pokémon in a modal popup.
 
-Overview
+Usage
 
-This project provides a searchable list of Pokémon, where each entry can be clicked to view detailed information in a modal popup. Built with vanilla JavaScript, Bootstrap, and accessible for screen readers, the repository is styled for clarity and ease of use.
-Features
+    Fetch Pokémon Data
+    The app fetches Pokémon data from the PokéAPI with a limit of 150 Pokémon.
 
-    List Pokémon names in a responsive, scrollable list
-    Click on a Pokémon to view details, including height, types, and an image
-    Modal pop-up with accessible structure for screen readers
-    Optimized for various screen sizes with Bootstrap’s utility classes
+    Display Pokémon List
+    The main page displays a list of Pokémon as buttons, each of which opens a modal containing detailed information about the selected Pokémon.
 
-Technologies Used
+    Modal Details View
+    Clicking a Pokémon button opens a smaller modal popup that overlaps the Pokémon list. This modal contains details such as the Pokémon's name, type, and stats.
 
-    HTML5 and CSS3
-    JavaScript (ES6)
-    Bootstrap 4
-    PokéAPI for fetching Pokémon data
-    ESLint for code linting
-    GitHub Desktop for version control
+    Features
+
+    Responsive Design
+    The layout is responsive, adapting to various screen sizes and providing a user-friendly experience across devices.
+
+    Consistent Button Sizing
+    All Pokémon buttons are styled to be the same size for visual consistency.
+
+    Modal Popup for Pokémon Details
+    A modal popup displays Pokémon details. This modal is centered and overlaps the correct button, improving user experience.
+
+    Technologies Used
+
+    HTML/CSS/JavaScript
+    The project is built using standard web technologies.
+
+    ESLint
+    The ESLint plugin is used for code linting to maintain code quality.
+
+    Git & GitHub
+    Version control is managed using Git, with commits tracked on GitHub.
