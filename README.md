@@ -21,9 +21,7 @@ Features
     Modal pop-up with accessible structure for screen readers
     Optimized for various screen sizes with Bootstrap’s utility classes
 
-
-
-
+Technologies Used
 
     HTML5 and CSS3
     JavaScript (ES6)
