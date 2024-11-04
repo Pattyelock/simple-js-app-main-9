@@ -2,7 +2,7 @@
 
 A web application that displays a list of Pokémon, fetched from the [PokéAPI](https://pokeapi.co/), allowing users to view details of each Pokémon in a modal popup.
 
-Usage
+# Usage
 
     Fetch Pokémon Data
     The app fetches Pokémon data from the PokéAPI with a limit of 150 Pokémon.
@@ -13,7 +13,7 @@ Usage
     Modal Details View
     Clicking a Pokémon button opens a smaller modal popup that overlaps the Pokémon list. This modal contains details such as the Pokémon's name, type, and stats.
 
-    Features
+# Features
 
     Responsive Design
     The layout is responsive, adapting to various screen sizes and providing a user-friendly experience across devices.
@@ -23,8 +23,8 @@ Usage
 
     Modal Popup for Pokémon Details
     A modal popup displays Pokémon details. This modal is centered and overlaps the correct button, improving user experience.
-
-    Technologies Used
+    
+# Technologies Used
 
     HTML/CSS/JavaScript
     The project is built using standard web technologies.
