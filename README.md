@@ -3,14 +3,6 @@ Pokémon Repository
 A web-based Pokémon repository that fetches data from the PokéAPI to display a list of Pokémon with details, using a responsive and interactive interface built with Bootstrap.
 Table of Contents
 
-    Overview
-    Features
-    Technologies Used
-    Setup
-    How to Use
-    Folder Structure
-    License
-
 Overview
 
 This project provides a searchable list of Pokémon, where each entry can be clicked to view detailed information in a modal popup. Built with vanilla JavaScript, Bootstrap, and accessible for screen readers, the repository is styled for clarity and ease of use.
