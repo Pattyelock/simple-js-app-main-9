@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        // General Best Practices
+        "eqeqeq": "warn",
+        "curly": "error",
+        "no-multi-spaces": "warn",
+        "semi": ["error", "always"],
+        
+        // Code Style
+        "quotes": ["error", "single"],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "max-len": ["warn", { "code": 80 }],
+        
+        // Variables
+        "no-unused-vars": "warn",
+        "no-undef": "error",
+        
+        // Functions & Methods
+        "no-magic-numbers": ["warn", { "ignore": [0, 1] }],
+        "prefer-const": "warn",
+        "arrow-body-style": ["warn", "as-needed"],
+
+        // Accessibility and Readability
+        "no-console": "off", // Useful for debugging, but can set to "warn"
+        "no-alert": "warn",
+        "no-debugger": "warn"
+    }
+}
